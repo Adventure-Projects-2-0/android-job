@@ -6,7 +6,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1' // for jitpack
     }
 }
 
