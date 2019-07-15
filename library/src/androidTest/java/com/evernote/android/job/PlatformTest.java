@@ -161,19 +161,19 @@ public class PlatformTest {
 
     @Test
     public void testUpdateCurrent() {
-        String TAG = "tag";
+        String aTAG = "tag";
 
-        JobRequest.Builder builder = new JobRequest.Builder(TAG)
+        JobRequest.Builder builder = new JobRequest.Builder(aTAG)
                 .setUpdateCurrent(true)
                 .setExecutionWindow(TimeUnit.HOURS.toMillis(4), TimeUnit.HOURS.toMillis(5));
 
         builder.build().schedule();
 
-        assertThat(JobManager.instance().getAllJobRequestsForTag(TAG)).hasSize(1);
+        assertThat(JobManager.instance().getAllJobRequestsForTag(aTAG)).hasSize(1);
 
         builder.build().schedule();
 
-        assertThat(JobManager.instance().getAllJobRequestsForTag(TAG)).hasSize(1);
+        assertThat(JobManager.instance().getAllJobRequestsForTag(aTAG)).hasSize(1);
     }
 
     private final class TestJob extends Job {
